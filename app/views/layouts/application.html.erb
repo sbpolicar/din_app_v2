@@ -13,8 +13,14 @@
 </head>
 <body>
 
+<% if @current_user %>
+<%= render partial: 'layouts/nav' %>
+<% else %>
+<% end %>
+
 
 <div class="container">
+
 
 
 <%= yield %>
