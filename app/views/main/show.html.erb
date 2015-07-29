@@ -1,22 +1,27 @@
+<%= render partial: 'layouts/nav' %>
+
 <div>
-  <div class="pull-center text-center">
-    <%= image_tag(@place.image_url.gsub!("ms.jpg","l.jpg"), class: "img_edit") %>
+  <div class="pull-left text-center">
     <h1><strong><%= @place.name %></strong></h1><br>
-    <%= image_tag "https://s3-media3.fl.yelpcdn.com/assets/srv0/developer_pages/2d7ab232224f/assets/img/yelp_logo_100x50.png"%><br>
-    <%= image_tag @place.rating_img_url_large %><br>
+    <%= image_tag(@place.image_url.gsub!("ms.jpg","l.jpg"), class: "img_edit") %>
     <hr>
   </div>
+    <%= image_tag "https://s3-media3.fl.yelpcdn.com/assets/srv0/developer_pages/2d7ab232224f/assets/img/yelp_logo_100x50.png"%><br>
+    <%= image_tag @place.rating_img_url_large %><br>
 
-  <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-  <%= @place.location.address[0] %><br>
+  <hr>
+  <h3 class="col-xs-4 col-sm-4 col-md-4 col-lg-4 pull-right">
+  <%= @place.location.address[0] %><br><br>
+
   <% @place.categories.each do |i| %>
   <li><%= i[0] %></li>
   <% end%>
-  <%= @place.snippet_text %><br>
+  <%#= @place.snippet_text %><br>
 
   <%= @place.display_phone %><br>
   <a href="#"><%= link_to "Back", root_path, class: "btn btn-primary pull-bottom btn-xs glyphicon glyphicon-chevron-left" %></a>
-  </div>
+  <hr>
+  </h3>
 </div>
 
 

@@ -24,18 +24,35 @@
 }
 
 .centerize{
-  margin-left: 20em;
+  margin-left:26.5em;
 }
 
+.minimizer{
+  width: 2.5%;
+  height: 2.5%;
+}
+
+.small{
+  width:18%;
+  height:18%;
+}
+
+.transparent{
+  color: transparent;
+}
+
+.font-plus{
+  font-size: 40em;
+}
 
 body{
-
--webkit-touch-callout: none;
-   -webkit-user-select: none;
-   -khtml-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
+  font-family: 'Open Sans Condensed', sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 

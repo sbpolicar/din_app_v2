@@ -8,7 +8,7 @@ class MainController < ApplicationController
 
   def show
     @result = params[:id]
-    @place = Yelp.client.business(@result).normalize
+    @place = Yelp.client.business(@result)
   end
 
 
