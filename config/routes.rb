@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
-
   root 'home#index'
 
   get 'main' => 'main#index'
   post 'show' => 'main#show'
   get 'show' => 'main#show'
-  get 'show/:id' => 'main#show'
+  get 'show/:id' => 'main#show', as: 'restaurant'
 
   get 'signup' => 'users#new', as: :new_user
   post 'signup' => 'users#create', as: :users
@@ -14,6 +13,10 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
+
+  get 'favorite/:id' => 'main#favorite', as: 'favorite'
+  # get 'unfavorite' => 'main#destroy'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

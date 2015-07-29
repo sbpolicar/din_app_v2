@@ -11,6 +11,10 @@ class MainController < ApplicationController
     @place = Yelp.client.business(@result)
   end
 
+  def favorite
+    f = Favorite.create(place_id:(params[:id]), user_id:(@current_user.id))
+    redirect_to restaurant_path(params[:id])
+  end
 
 
 end
