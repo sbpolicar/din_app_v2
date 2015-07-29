@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:user][:email], params[:user][:password])
     if(user)
       session[:user_id] = user.id
-      redirect_to root_path
+      redirect_to main_path
     else
       redirect_to login_path
     end
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to login_path
+    redirect_to root_path
   end
 
 end

@@ -1,0 +1,22 @@
+<div class="text-center"><%= image_tag('logo.png', class: "small") %><h1 class="font-plus"><strong>Dinnder</strong></h1></div>
+
+<div class="text-center">
+<% if @current_user %>
+<%= link_to "Go!", main_path, class: "btn btn-success" %>
+<% else %>
+<a href="/signup" class="btn btn-warning pull-center" >Sign Up</a>
+<a href="/login" class="btn btn-primary pull-center">Log In</a>
+<% end %>
+</div>
+
+<div class="">
+  <div class="scroller-no-click pull-center">
+  <% @search.businesses.each do |f| %>
+      <a href="#"><%= image_tag(f.image_url.gsub!("ms.jpg","l.jpg"), :class => "img_edit centerize") %></a>
+  <% end %>
+  <% @search1.businesses.each do |f| %>
+    <a href="#"><%= image_tag(f.image_url.gsub!("ms.jpg","l.jpg"), :class => "img_edit centerize" ) %></a>
+  <% end %>
+  <hr>
+  </div>
+</div>

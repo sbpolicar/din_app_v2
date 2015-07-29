@@ -9,7 +9,11 @@
         <span class="icon-bar"></span>
       </button>
       <div class="row">
-      <h2><%= image_tag('logo.png', class: "minimizer")%><%= link_to "Dinnder", root_path %></h2>
+      <% if @current_user %>
+        <h2><%= image_tag('logo.png', class: "minimizer")%><%= link_to "Dinnder", main_path %></h2>
+      <% else %>
+        <h2><%= image_tag('logo.png', class: "minimizer")%><%= link_to "Dinnder", root_path %></h2>
+      <% end %>
       </div>
     </div>
 

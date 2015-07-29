@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  root 'main#index'
+
+
+  root 'home#index'
+
+  get 'main' => 'main#index'
   post 'show' => 'main#show'
   get 'show' => 'main#show'
   get 'show/:id' => 'main#show'

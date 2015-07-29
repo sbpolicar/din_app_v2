@@ -16,11 +16,19 @@
  *= require slick-theme
  */
 
+
+
 .img_edit{
   border-radius: 50%;
   width: 400px;
   height: 400px;
   margin: 25px;
+  box-shadow: 0 0 30px 1px rgba(0,0,0,0.4);
+}
+
+.img_edit:hover{
+  box-shadow: 0 0 70px 2px rgba(255,50,50,0.5);
+
 }
 
 .centerize{
@@ -33,8 +41,8 @@
 }
 
 .small{
-  width:18%;
-  height:18%;
+  width:12%;
+  height:12%;
 }
 
 .transparent{
@@ -42,10 +50,11 @@
 }
 
 .font-plus{
-  font-size: 40em;
+  font-size: 5em;
 }
 
 body{
+  background-color:#2563AB;
   font-family: 'Open Sans Condensed', sans-serif;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
