@@ -11,8 +11,9 @@
           <div class="pull-right">
 
             <% if @current_user %>
-              <%= @current_user.display_name %>
-              <%= link_to "",logout_path, class: "glyphicon glyphicon-remove" %>
+              <%= @current_user.display_name %><br>
+              <%= link_to "My Favorites", favorites_path, class: "" %><br>
+              <%= link_to "Logout",logout_path, class: "" %>
             <% else %>
               <li><a href="/signup" class="btn btn-warning" >Sign Up</a></li>
               <li><a href="/login" class="btn btn-primary">Log In</a></li>

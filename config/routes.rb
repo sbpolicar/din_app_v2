@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
 
+  get 'favorites' => 'favorites#index'
   get 'favorite/:id' => 'main#favorite', as: 'favorite'
   # get 'unfavorite' => 'main#destroy'
 
