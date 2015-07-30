@@ -1,32 +1,27 @@
 
 <%#= @current_user.id %>
 <ul class="list-group">
-    <li class="list-group-item">
-<h1>
-<%= @current_user.display_name %>'s favorites:
-</h1>
-  <% @favorites.each do |i| %>
-      <td>
-      <%= link_to "#{i.place_id.split('-')[0].capitalize}", restaurant_path(i.place_id) %>
+  <h1><%= @current_user.display_name %>'s favorites:</h1>
+  <li class="list-group-item">
+
+
+    <% @favorites.each do |i| %>
+    <span>
+      <span class="divider">
+        <span class=""><%= link_to "#{i.place_id.split('-')[0].capitalize}", restaurant_path(i.place_id), class: "nav-font-size" %>
+        <%= link_to "Delete", unfavorite_path, class: "btn btn-danger btn-xs glyphicon glyphicon-remove" %></span>
+
       <%= image_tag(Yelp.client.search('Seattle', { term: "#{i.place_id.split('-')[0].capitalize}", limit: 20 }).businesses[0].image_url.gsub!("ms.jpg","l.jpg"), class: "img_edit small_fave") %>
-      </td>
+      </span>
+
+
+
+  </span>
   <% end %>
-    </li>
-    <%#= i.user_id %>
+
+  </li>
+    <a href="#">
+      <%= link_to "Back", main_path, class: "btn btn-primary btn-xs glyphicon glyphicon-chevron-left pull-right" %>
+    </a>
+  <%#= i.user_id %>
 </ul>
-
-
-<table class="table table-hover">
-
-  <h1>
-    <%= @current_user.display_name %>'s favorites:
-  </h1>
-
-  <tbody>
-    <tr>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-
-

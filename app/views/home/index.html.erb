@@ -1,9 +1,11 @@
+
+<% if @current_user %>
+<div class="text-center"><%= link_to "Go!", main_path, class: "btn btn-success" %>
+<% else %>
+
 <div class="text-center"><%= image_tag('logo.png', class: "small") %><h1 class="font-plus"><strong>Dinnder</strong></h1></div>
 
 <div class="text-center">
-<% if @current_user %>
-<%= link_to "Go!", main_path, class: "btn btn-success" %>
-<% else %>
 <a href="/signup" class="btn btn-warning pull-center" >Sign Up</a>
 <a href="/login" class="btn btn-primary pull-center">Log In</a>
 <% end %>

@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
   get 'favorites' => 'favorites#index'
   get 'favorite/:id' => 'main#favorite', as: 'favorite'
+  get 'unfavorite' => 'main#destroy'
+
+
   # get 'unfavorite' => 'main#destroy'
 
 

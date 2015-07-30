@@ -16,5 +16,9 @@ class MainController < ApplicationController
     redirect_to restaurant_path(params[:id])
   end
 
+  def destroy
+    @current_user.favorites.find(:id).delete
+    redirect_to favorites_path
+  end
 
 end
