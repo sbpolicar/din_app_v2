@@ -12,7 +12,7 @@ class MainController < ApplicationController
   end
 
   def favorite
-    f = Favorite.create(place_id:(params[:id]), user_id:(@current_user.id))
+    fave = Favorite.create(place_id:(params[:id]), user_id:(@current_user.id))
     redirect_to restaurant_path(params[:id])
   end
 

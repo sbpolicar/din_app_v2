@@ -1,12 +1,32 @@
-<h1>Favorites#index</h1>
-<p>Find me in app/views/favorites/index.html.erb</p>
 
-<% @favorites.each do |i| %>
-<%= i.place_id %>
-<%= @current_user.display_name %>
+<%#= @current_user.id %>
+<ul class="list-group">
+    <li class="list-group-item">
+<h1>
+<%= @current_user.display_name %>'s favorites:
+</h1>
+  <% @favorites.each do |i| %>
+      <td>
+      <%= link_to "#{i.place_id.split('-')[0].capitalize}", restaurant_path(i.place_id) %>
+      <%= image_tag(Yelp.client.search('Seattle', { term: "#{i.place_id.split('-')[0].capitalize}", limit: 20 }).businesses[0].image_url.gsub!("ms.jpg","l.jpg"), class: "img_edit small_fave") %>
+      </td>
+  <% end %>
+    </li>
+    <%#= i.user_id %>
+</ul>
 
 
-<% end %>
+<table class="table table-hover">
 
+  <h1>
+    <%= @current_user.display_name %>'s favorites:
+  </h1>
+
+  <tbody>
+    <tr>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 

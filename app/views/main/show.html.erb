@@ -27,6 +27,7 @@
   <%= @place.display_phone %><br>
   <a href="#">
     <%= link_to "Back", main_path, class: "btn btn-primary btn-xs glyphicon glyphicon-chevron-left" %>
+    <%= @current_user.favorites.find place_id %>
     <%= link_to "Favorite", favorite_path(@place.id), class: "btn btn-success btn-xs glyphicon glyphicon-plus" %>
   </a>
   <hr>

@@ -52,6 +52,11 @@
   height:12%;
 }
 
+.small_fave{
+  width:100px;
+  height:100px;
+}
+
 .transparent{
   color: transparent;
 }
