@@ -1,5 +1,5 @@
 
-<nav class="navbar nav-style btn-info active navbar-default">
+<nav class="navbar nav-style btn-info disabled navbar-default">
   <div class="container-fluid">
 
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -12,7 +12,7 @@
         <span class="icon-bar"></span>
       </button>
     </div>
-      <p class="navbar-brand nav-search-margin text-white">Because food is more fun.</p>
+      <p class="navbar-brand nav-search-margin text-white">Because food.</p>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -20,17 +20,20 @@
       <ul class="nav navbar-nav navbar-right nav-search-margin">
         <li class="pull-left navbar-form btn-primary btn-padder">
           <%= bootstrap_form_tag url: search_path do |f| %>
-          <%= f.text_field :q, hide_label: true, class: "glyphicon glyphicon-user" %>
+          <%= f.text_field :q, placeholder: "Search by category", hide_label: true, class: "icon-search" %>
+          <i class="icon-search"></i>
           <% f.primary "Search" %>
           <% end %>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle drop-font-size" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= @current_user.display_name %><span class="caret"></span></a>
           <ul class="dropdown-menu drop-font-size">
-            <li><%= link_to "Home", main_path, class: "btn-info" %></li>
-            <li><%= link_to "My Favorites", favorites_path, class: "btn-success" %></li>
+            <li><%= link_to "Home", main_path, class: "btn-info text-white" %></li>
+            <li><%= link_to "My Favorites", favorites_path, class: "btn-success text-white" %></li>
+            <li><%= link_to "About", about_path, class: "btn-default text-white" %></li>
+
             <li role="separator" class="divider"></li>
-            <li><%= link_to "Logout",logout_path, class: "btn-warning" %></li>
+            <li><%= link_to "Logout",logout_path, class: "btn-warning text-white" %></li>
           </ul>
         </li>
       </ul>

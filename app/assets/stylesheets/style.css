@@ -1,14 +1,15 @@
 .divider{
   width: 100px;
   height: 100px;
-  margin-right: 1%;
+  margin-right: 7%;
   border-right: dotted #2563AB 3px;
   /*border-left: dotted #2563AB 3px;*/
 }
 
 .nav-style{
   /*background-color:#74BEFF;*/
-  border: solid #2563AB 2px;
+  border-bottom: solid #4B1532 4px !important;
+
 }
 
 .img_edit{
@@ -32,6 +33,11 @@
 .centerize{
   margin-left:33%;
 }
+.centerize-about{
+  margin-left:48%;
+  position: relative;
+  top: 100px;
+}
 
 .minimizer{
   width: 10%;
@@ -53,6 +59,7 @@
 .small_fave{
   width:100px;
   height:100px;
+  opacity: 0.5;
 }
 
 .transparent{
@@ -112,7 +119,7 @@
 body{
   background-image: url('https://scontent-sea1-1.xx.fbcdn.net/hphotos-xtp1/t31.0-8/11792017_1669770766588093_7278343843106231900_o.jpg');
   background-size: 100% auto;
-  font-family: 'Open Sans Condensed', sans-serif;
+  /*font-family: 'Open Sans Condensed', sans-serif !important;*/
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;

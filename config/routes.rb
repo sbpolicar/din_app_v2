@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'show/:id' => 'main#show', as: 'restaurant'
   get 'search' => 'main#search'
   post 'search' => 'main#search'
+  get 'about' => 'main#about'
 
   get 'signup' => 'users#new', as: :new_user
   post 'signup' => 'users#create', as: :users
