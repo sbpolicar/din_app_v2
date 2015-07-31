@@ -126,6 +126,8 @@ body{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  opacity: 0.9;
+
 }
 
 .login{
@@ -144,6 +146,16 @@ body{
 .text-orange{
   color: orange !important;
 }
+
+.home-rounder{
+  border-radius: 0 0 10px 10px;
+  /*opacity: 0.9;*/
+}
+
+
+
+
+
 
 
 
