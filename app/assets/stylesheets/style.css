@@ -132,3 +132,18 @@ body{
   background-color: transparent !important;
 }
 
+.nav-head-text{
+  text-decoration:none !important;
+  color: white !important;
+}
+.nav-head-text:hover{
+  text-decoration:none !important;
+  color: silver !important;
+}
+
+.text-orange{
+  color: orange !important;
+}
+
+
+
