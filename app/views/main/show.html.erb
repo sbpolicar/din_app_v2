@@ -1,7 +1,7 @@
 
 <div>
   <div class="pull-left col-xs-6 col-sm-6 col-md-6 col-lg-6 btn-info active text-center">
-    <h1 class=""><strong><%= @place.name %></strong><br>
+    <h1 class=""><strong><a href="<%= @place.url %>"><%= @place.name %></a></strong><br>
     <hr>
     <b>
     <%= image_tag "https://s3-media3.fl.yelpcdn.com/assets/srv0/developer_pages/2d7ab232224f/assets/img/yelp_logo_100x50.png"%>
@@ -30,11 +30,13 @@
     <b>Styles:</b><% @place.categories.each do |i| %>
     <i><li><%= i[0] %></li></i>
     <% end%><br>
+    <b>Contact:</b><br>
     <%= @place.display_phone %><br>
     <b>
       <%= image_tag "https://s3-media3.fl.yelpcdn.com/assets/srv0/developer_pages/2d7ab232224f/assets/img/yelp_logo_100x50.png"%>
-      <%#= image_tag @place.reviews.user.image_url %><br>
+      <%#= @place.reservation_url %><br>
     </b>
+
     <div name="" id="input" class="well active btn-primary"><p><%= @place.snippet_text %></p></div>
     <hr>
     </h3>
