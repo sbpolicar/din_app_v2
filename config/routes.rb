@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post 'show' => 'main#show'
   get 'show' => 'main#show'
   get 'show/:id' => 'main#show', as: 'restaurant'
+  get 'search' => 'main#search'
+  post 'search' => 'main#search'
 
   get 'signup' => 'users#new', as: :new_user
   post 'signup' => 'users#create', as: :users
@@ -16,7 +18,7 @@ Rails.application.routes.draw do
 
   get 'favorites' => 'favorites#index'
   get 'favorite/:id' => 'main#favorite', as: 'favorite'
-  get 'unfavorite' => 'main#destroy'
+  get 'unfavorite/:id' => 'main#destroy', as: 'unfavorite'
 
 
   # get 'unfavorite' => 'main#destroy'

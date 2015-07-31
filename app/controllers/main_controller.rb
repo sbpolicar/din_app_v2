@@ -17,8 +17,14 @@ class MainController < ApplicationController
   end
 
   def destroy
-    @current_user.favorites.find(:id).delete
+    @current_user.favorites.find(params[:id]).delete
     redirect_to favorites_path
+  end
+
+  def search
+    @query = params[:q]
+    @search = Yelp.client.search('Seattle', { term: "#{@query}", limit: 20 })
+    # @search1 = Yelp.client.search('Seattle', { term: "food", limit: 20 })
   end
 
 end

@@ -9,10 +9,8 @@
     <%= image_tag @place.rating_img_url_large %><br>
     <div><%= @place.review_count %> Reviews</div>
     <%= image_tag(@place.image_url.gsub!("ms.jpg","l.jpg"), class: "img_edit") %>
-
     <hr>
   </div>
-
   <div>
   <h3 class="pull-right col-xs-4 col-sm-4 col-md-4 col-lg-4">
   <hr>
@@ -27,10 +25,7 @@
   <%= @place.display_phone %><br>
   <a href="#">
     <%= link_to "Back", main_path, class: "btn btn-primary btn-xs glyphicon glyphicon-chevron-left" %>
-
     <%= link_to "Favorite", favorite_path(@place.id), class: "btn btn-success btn-xs glyphicon glyphicon-plus" %>
-    <%= link_to "Delete", unfavorite_path, class: "btn btn-danger btn-xs glyphicon glyphicon-remove" %></span>
-
   </a>
   <hr>
   <b>

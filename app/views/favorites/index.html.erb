@@ -9,7 +9,7 @@
     <span>
       <span class="divider">
         <span class=""><%= link_to "#{i.place_id.split('-')[0].capitalize}", restaurant_path(i.place_id), class: "nav-font-size" %>
-        <%= link_to "Delete", unfavorite_path, class: "btn btn-danger btn-xs glyphicon glyphicon-remove" %></span>
+        <%= link_to "Delete", unfavorite_path(i), class: "btn btn-danger btn-xs glyphicon glyphicon-remove" %></span>
 
       <%= image_tag(Yelp.client.search('Seattle', { term: "#{i.place_id.split('-')[0].capitalize}", limit: 20 }).businesses[0].image_url.gsub!("ms.jpg","l.jpg"), class: "img_edit small_fave") %>
       </span>

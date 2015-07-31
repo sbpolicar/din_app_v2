@@ -3,8 +3,6 @@
   <% @search.businesses.each do |f| %>
       <a href="/show/<%= f.id %>"><%= image_tag(f.image_url.gsub!("ms.jpg","l.jpg"), :class => "img_edit centerize") %></a>
   <% end %>
-  <% @search1.businesses.each do |f| %>
-    <a href="/show/<%= f.id %>"><%= image_tag(f.image_url.gsub!("ms.jpg","l.jpg"), :class => "img_edit centerize" ) %></a>
-  <% end %>
+
   </div>
 </div>
