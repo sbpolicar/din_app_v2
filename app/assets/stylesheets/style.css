@@ -1,0 +1,122 @@
+.divider{
+  width: 100px;
+  height: 100px;
+  margin-right: 1%;
+  border-right: dotted #2563AB 3px;
+  /*border-left: dotted #2563AB 3px;*/
+}
+
+.nav-style{
+  /*background-color:#74BEFF;*/
+  border: solid #2563AB 2px;
+}
+
+.img_edit{
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  margin: 25px;
+  box-shadow: 0 0 30px 1px rgba(0,0,0,0.5);
+}
+
+.img_s{
+  width: 50%;
+  height: 50%;
+}
+
+.img_edit:hover{
+  box-shadow: 0 0 40px 1px rgba(255,50,50,0.5);
+
+}
+
+.centerize{
+  margin-left:33%;
+}
+
+.minimizer{
+  width: 10%;
+  height: 400%;
+}
+
+.small{
+  width:10%;
+  height:10%;
+  position: relative;
+  left: 5px;
+  top: 20px;
+}
+
+.drop-font-size{
+  font-size: 2em;
+}
+
+.small_fave{
+  width:100px;
+  height:100px;
+}
+
+.transparent{
+  color: transparent;
+}
+
+.font-plus{
+  font-size: 5em;
+}
+
+.nav-font-size{
+  font-size: 500%;
+  position: relative;
+  top: 1%;
+
+}
+
+.nav-position{
+  position: relative;
+  top: 20.5px;
+
+}
+
+.logo-position{
+  position: relative;
+  top: -12px;
+}
+
+.nav-search-margin{
+  position: relative;
+  top:32.5px;
+}
+
+.btn-padder{
+  padding: 10px;
+  bottom: 10px;
+  border-radius: 10px;
+}
+
+.arrow{
+  border-radius: 15px;
+  background-color: white !important;
+  width: 50px !important;
+  height: auto !important;
+  position: relative;
+  border: solid #2563AB 2px !important;
+}
+
+.text-white{
+  color: white !important;
+}
+
+.arrow:hover{
+  background-color: silver !important;
+}
+
+body{
+  background-image: url('background.png');
+  background-size: 100% auto;
+  font-family: 'Open Sans Condensed', sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

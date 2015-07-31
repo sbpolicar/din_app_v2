@@ -15,7 +15,7 @@
  *= require slick
  *= require slick-theme
  */
-.divider{
+/*.divider{
   width: 100px;
   height: 100px;
   border-right: dotted #2563AB 3px;
@@ -98,7 +98,7 @@ body{
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
+}*/
 
 
 

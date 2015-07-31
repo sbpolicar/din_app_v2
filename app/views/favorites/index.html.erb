@@ -1,25 +1,22 @@
 
 <%#= @current_user.id %>
 <ul class="list-group">
-  <h1><%= @current_user.display_name %>'s favorites:</h1>
-  <li class="list-group-item">
+  <div class="btn-info btn-padder active"><h1><%= @current_user.display_name %>'s favorites:</h1></div>
+  <div class="active btn-default btn-padder">
 
 
     <% @favorites.each do |i| %>
     <span>
       <span class="divider">
-        <span class=""><%= link_to "#{i.place_id.split('-')[0].capitalize}", restaurant_path(i.place_id), class: "nav-font-size" %>
-        <%= link_to "Delete", unfavorite_path(i), class: "btn btn-danger btn-xs glyphicon glyphicon-remove" %></span>
-
-      <%= image_tag(Yelp.client.search('Seattle', { term: "#{i.place_id.split('-')[0].capitalize}", limit: 20 }).businesses[0].image_url.gsub!("ms.jpg","l.jpg"), class: "img_edit small_fave") %>
+        <span class="btn-info btn"><%= link_to "#{i.place_id.split('-')[0].capitalize}", restaurant_path(i.place_id), class: "nav-font-size" %>
+        <%= link_to "", unfavorite_path(i), class: "btn btn-danger btn-xs glyphicon glyphicon-remove" %>
+        </span>
+      <a href="#"><%= image_tag(Yelp.client.search('Seattle', { term: "#{i.place_id.split('-')[0].capitalize}", limit: 20 }).businesses[0].image_url.gsub!("ms.jpg","l.jpg"), class: "img_edit small_fave") %></a>
       </span>
-
-
-
   </span>
   <% end %>
 
-  </li>
+  </div>
     <a href="#">
       <%= link_to "Back", main_path, class: "btn btn-primary btn-xs glyphicon glyphicon-chevron-left pull-right" %>
     </a>
