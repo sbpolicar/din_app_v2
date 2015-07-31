@@ -120,3 +120,8 @@ body{
   -ms-user-select: none;
   user-select: none;
 }
+
+.login{
+  background-color: transparent !important;
+}
+

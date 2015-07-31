@@ -1,14 +1,13 @@
-<div class="col-sm-offset-4 col-sm-4">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">Log In</h3>
-    </div>
-    <div class="panel-body">
+<div class="col-sm-offset-4 text-center col-sm-4 login">
+<h1 class="btn-info btn-padder">Welcome back to Dinnder</h1>
+    <div class="panel-body text-center login">
       <%= bootstrap_form_for :user do |f| %>
-        <%= f.text_field :email %>
-        <%= f.password_field :password %>
+        <%= f.text_field :email, hide_label: true, placeholder: "Email" %>
+        <%= f.password_field :password, hide_label: true,placeholder: "Password"%>
         <%= f.primary "Log In" %>
+        <%= link_to "Back", root_path, class: "btn btn-info" %>
+
       <% end %>
     </div>
-  </div>
+
 </div>

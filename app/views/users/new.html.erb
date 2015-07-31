@@ -1,15 +1,17 @@
-<div class="col-sm-offset-4 col-sm-4">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h3 class="panel-title">Sign Up</h3>
-    </div>
-    <div class="panel-body">
+
+<div class="col-sm-offset-4 text-center col-sm-4 login">
+<h1 class="btn-info btn-padder">Welcome to Dinnder</h1>
+    <div class="panel-body text-center login">
       <%= bootstrap_form_for @user do |f| %>
-        <%= f.text_field :email %>
-        <%= f.text_field :name %>
-        <%= f.password_field :password %>
-        <%= f.primary "Join Now" %>
+        <%= f.text_field :email, hide_label: true, placeholder: "Email" %>
+        <%= f.text_field :name, hide_label: true, placeholder: "Username" %>
+        <%= f.password_field :password, hide_label: true, placeholder: "Password" %>
+        <%= f.submit "∆ Join Now", class: "btn btn-warning" %>
+        <a href="/login" class="btn btn-primary pull-center">Log In</a>
+        <%= link_to "« Back", root_path, class: "btn btn-info" %>
+
+
       <% end %>
     </div>
-  </div>
+
 </div>
