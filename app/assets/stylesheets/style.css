@@ -110,7 +110,7 @@
 }
 
 body{
-  background-image: url('background.png');
+  background-image: url('app/assets/images/background.png');
   background-size: 100% auto;
   font-family: 'Open Sans Condensed', sans-serif;
   -webkit-touch-callout: none;
