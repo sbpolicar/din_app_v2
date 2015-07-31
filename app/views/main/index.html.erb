@@ -1,4 +1,4 @@
-<div class="">
+<div class=""><h2 class="text-center disabled btn-primary btn-padder">Click to find deliciousness!</h2>
   <div class="scroller pull-center">
   <% @search.businesses.each do |f| %>
       <a href="/show/<%= f.id %>"><%= image_tag(f.image_url.gsub!("ms.jpg","l.jpg"), :class => "img_edit centerize") %></a>
