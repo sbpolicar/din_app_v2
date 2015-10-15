@@ -1,51 +1,48 @@
-
-<div>
-  <div class="pull-left col-xs-6 col-sm-6 col-md-6 col-lg-6 btn-info active text-center">
-    <h1 class="">
-    <strong><a href="<%= @place.url %>"><%= image_tag 'https://lh4.ggpht.com/F0F4Z965uf3psiHu5h77e-8o-Yla68BEaJI8xLfK-V3JkMK4yQv1WLqqZQCwYhDevKoa=w300', class: "minimizer" %><%= @place.name %></a></strong><br>
-    <hr>
-    <b>
-    <%= image_tag "https://s3-media3.fl.yelpcdn.com/assets/srv0/developer_pages/2d7ab232224f/assets/img/yelp_logo_100x50.png"%>
-    Rating:</b><br>
-    <%= image_tag @place.rating_img_url_large %><br>
-    <div><%= @place.review_count %> Reviews</div>
-    <a href="#">
-      <%= link_to "Back", main_path, class: "btn btn-primary glyphicon glyphicon-chevron-left" %>
-      <%= link_to "Favorite", favorite_path(@place.id), class: "btn btn-success glyphicon glyphicon-plus" %>
-    </a>
-    <%= image_tag(@place.image_url.gsub!("ms.jpg","l.jpg"), class: "img_edit") %>
-    <hr>
-    </h1>
-  </div>
-  <div class="">
-    <div class="btn-info active  pull-right col-xs-4 col-sm-4 col-md-4 col-lg-4">
-    <h1 class="text-center text-orange"><b>Info</b></h1>
-    <hr>
-    <h3>
-    <b>Location:
-    </b><br><%= @place.location.address[0] %><br>
-    <%= @place.location.neighborhoods[0] %>,
-    <%= @place.location.city %>
-    <br>
-    <br>
-    <b>Styles:</b><% @place.categories.each do |i| %>
-    <i><li><%= i[0] %></li></i>
-    <% end%><br>
-    <b>Contact:</b><br>
-    <%= @place.display_phone %><br><br>
-    <b>
-      <%= image_tag "https://s3-media3.fl.yelpcdn.com/assets/srv0/developer_pages/2d7ab232224f/assets/img/yelp_logo_100x50.png"%>
-      Quick Review:<br><br>
-      <%#= @place.reservation_url %>
-    </b>
-
-    <div name="" id="input" class="well  active btn-primary"><p><%= @place.snippet_text %></p></div>
-    <hr>
-    </h3>
+<div class="container">
+    <div class="pull-left col-xs-6 col-sm-6 col-md-6 col-lg-6 btn-primary disabled text-center">
+        <h1 class="">
+        <strong><a href="<%= @place.url %>"><%= image_tag 'https://lh4.ggpht.com/F0F4Z965uf3psiHu5h77e-8o-Yla68BEaJI8xLfK-V3JkMK4yQv1WLqqZQCwYhDevKoa=w300', class: "minimizer" %><%= @place.name %></a></strong><br>
+        <hr>
+        <b>
+        <%= image_tag "https://s3-media3.fl.yelpcdn.com/assets/srv0/developer_pages/2d7ab232224f/assets/img/yelp_logo_100x50.png"%>
+        Rating:</b><br>
+        <%= image_tag @place.rating_img_url_large %><br>
+        <div><%= @place.review_count %> Reviews</div>
+        <a href="#">
+        <%= link_to "Back", main_path, class: "btn btn-primary glyphicon glyphicon-chevron-left" %>
+        <%= link_to "Favorite", favorite_path(@place.id), class: "btn btn-success glyphicon glyphicon-plus" %>
+        </a>
+        <hr>
+        <%= image_tag(@place.image_url.gsub!("ms.jpg","l.jpg"), class: "img_edit") %>
+        <hr>
+        </h1>
     </div>
-  </div>
+    <div class="">
+        <div class="btn-primary disabled  pull-right col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <h1 class="text-center text-orange"><b>Info</b></h1>
+            <hr>
+            <h3>
+            <b>Location:
+            </b><br><%= @place.location.address[0] %><br>
+            <%= @place.location.neighborhoods[0] %>,
+            <%= @place.location.city %>
+            <br>
+            <br>
+            <b>Styles:</b><% @place.categories.each do |i| %>
+            <i><li><%= i[0] %></li></i>
+            <% end%><br>
+            <b>Contact:</b><br>
+            <%= @place.display_phone %><br><br>
+            <b>
+            <hr>
+            <%= image_tag "https://s3-media3.fl.yelpcdn.com/assets/srv0/developer_pages/2d7ab232224f/assets/img/yelp_logo_100x50.png"%>
+            Quick Review:<br><br>
+            <%#= @place.reservation_url %>
+            </b>
+            <div name="" id="input" class="well  active btn-primary"><p><%= @place.snippet_text %></p></div>
+            <hr>
+            </h3>
+        </div>
+    </div>
 </div>
-
-
-
 

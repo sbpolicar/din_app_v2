@@ -1,42 +1,35 @@
-
-<nav class="navbar nav-style btn-info disabled navbar-default">
+<nav class="navbar navbar-default btn-primary">
   <div class="container-fluid">
-
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header nav-font-size"><a class="nav-head-text" href="/main">
-    Dinnder<%= image_tag('logo.png', class: "")%></a>
+    <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <%= link_to "Dinnder", main_path, class: "navbar-brand text-white" %><%= image_tag('http://users.ininet.hu/retroboys/img/etlap.png', class: "navbar-brand") %>
     </div>
-      <p class="navbar-brand nav-search-margin text-orange">Because food.</p>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-      <ul class="nav navbar-nav navbar-right nav-search-margin">
-        <li class="pull-left navbar-form btn-primary btn-padder">
-          <%= bootstrap_form_tag url: search_path do |f| %>
-          <%= f.text_field :q, placeholder: "Search by category", hide_label: true, class: "icon-search" %>
-          <i class="icon-search"></i>
-          <% f.primary "Search" %>
-          <% end %>
-        </li>
+      <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle drop-font-size" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= @current_user.display_name %><span class="caret"></span></a>
-          <ul class="dropdown-menu drop-font-size">
-            <li><%= link_to "Home", main_path, class: "btn-info text-white" %></li>
-            <li><%= link_to "My Favorites", favorites_path, class: "btn-success text-white" %></li>
-            <li><%= link_to "About", about_path, class: "btn-default text-white" %></li>
+          <a href="#" class="dropdown-toggle text-white" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= @current_user.display_name %><span style="font-size:200px;" class="caret"></span></a>
+          <ul class="dropdown-menu btn-primary btn-padder disabled">
+            <li>
+              <%= bootstrap_form_tag url: search_path do |f| %>
+                <%= f.text_field :q, placeholder: "Search for...", hide_label: true, class: " icon-search" %>
+                <i class="icon-search"></i>
+                <% f.primary "Search" %>
+              <% end %>
+            </li>
+            <li class="dropdown-item"><%= link_to "Home", main_path, class: "dropdown-item text-white" %></li>
+            <li class="dropdown-item"><%= link_to "My Favorites", favorites_path, class: "dropdown-item text-white" %></li>
+            <li class="dropdown-item"><%= link_to "About", about_path, class: "dropdown-item text-white" %></li>
 
             <li role="separator" class="divider"></li>
-            <li><%= link_to "Logout",logout_path, class: "btn-warning text-white" %></li>
+            <li><%= link_to "Logout",logout_path, class: "dropdown-item text-white" %></li>
           </ul>
         </li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>

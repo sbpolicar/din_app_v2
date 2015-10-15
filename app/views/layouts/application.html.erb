@@ -4,14 +4,13 @@
 <head>
   <title>DinApp</title>
   <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <link rel="stylesheet" media="screen" href="style.css">
-  <link rel="stylesheet" media="screen" href="https://bootswatch.com/united/bootstrap.css">
+  <link rel="stylesheet" media="screen" href=<%= @booturl %>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
   <script src="//code.jquery.com/jquery.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 </head>
 <body>
 
@@ -21,11 +20,12 @@
 <% end %>
 
 
-<div class="container">
+<div class="">
 
 
-
-<%= yield %>
+<div class="">
+  <%= yield %>
+</div>
 
 
 </div>

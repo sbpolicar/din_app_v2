@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
 
   before_action :current_user
 
+
+
   def check_auth
     unless current_user
 
@@ -17,6 +19,14 @@ class ApplicationController < ActionController::Base
 
   def current_user
     @current_user ||= User.find_by_id(session[:user_id])
+
+    @booturl = ""
+    which_boot = rand(5)
+    if which_boot > 3
+      @booturl = "https://bootswatch.com/lumen/bootstrap.min.css"
+    else
+      @booturl = "https://bootswatch.com/spacelab/bootstrap.min.css"
+    end
   end
 
   def load_model
